@@ -8,7 +8,7 @@ import com.app.calculator.exception.CalculateException;
 
 public interface Calculate {
 	
-	public ResultDto calculation(String operation, double elementOne, double elementTwo) throws CalculateException;
+	public ResultDto calculation(String operation, Double elementOne, Double elementTwo) throws CalculateException;
 	
 	public List<ResultDto> getLatest10History();
 	

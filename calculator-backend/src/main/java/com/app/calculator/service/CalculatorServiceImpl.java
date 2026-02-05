@@ -26,7 +26,7 @@ public class CalculatorServiceImpl implements Calculate{
 	public static final String DIVISION = "divide";
 	
 	@Transactional
-	public ResultDto calculation(String operation, double element1, double element2) throws CalculateException {
+	public ResultDto calculation(String operation, Double element1, Double element2) throws CalculateException {
 		
 		ResultDto result = new ResultDto();
 		double resultOp =0;

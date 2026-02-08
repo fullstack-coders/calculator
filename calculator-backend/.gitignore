@@ -8,3 +8,9 @@
 /bin/
 /obj/
 /dist/
+
+# Ignore Java class files
+*.class
+
+# Ignore XML files (or be specific, e.g., .idea/*.xml)
+*.xml

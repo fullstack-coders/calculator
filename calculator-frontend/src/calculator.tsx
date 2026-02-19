@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import axios from 'axios';
 
 // TypeScript interface for our request
@@ -10,7 +10,7 @@ interface CalcRequest {
 
 const Calculator: React.FC = () => {
   const [inputs, setInputs] = useState({ n1: 0, n2: 0 });
-  const [result, setResult] = useState<number | null>(null);
+  const [result, setResult] = useState<number>(0);
 
   const handleCalc = async (op: string) => {
     const payload: CalcRequest = { elementOne: inputs.n1, elementTwo: inputs.n2, operationType: op };

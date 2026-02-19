@@ -5,6 +5,7 @@ import calculatorLogo from './assets/cal.png'
 import CalculatorButton from './button'
 import axios from 'axios'
 import Calculator from './calculator'
+import HistoryList from './history'
 import './App.css'
 
 function App() {
@@ -42,11 +43,12 @@ function App() {
           <CalculatorButton label="0" onClick={(value) => console.log(value)} />  
           <CalculatorButton label="." onClick={(value) => console.log(value)} />  
           <CalculatorButton label="<-" onClick={(value) => console.log(value)} />  
-          <CalculatorButton label="=" onClick={(value) => console.log(value)} />
+          {/* <CalculatorButton label="=" onClick={(value) => console.log(value)} /> */}
             
         </h1>
       </div>
       <Calculator />
+      <HistoryList />
       {/* <h1>Vite + React</h1> */}
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>

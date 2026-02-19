@@ -12,6 +12,10 @@ services:
       - "9090:9090"
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/calculator_db
+        # We override the properties here
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=Devops123
+      - SPRING_PROFILES_ACTIVE=docker
     depends_on:
       - db
 

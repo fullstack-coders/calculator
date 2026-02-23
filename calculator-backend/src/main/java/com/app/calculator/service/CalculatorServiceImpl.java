@@ -26,10 +26,7 @@ public class CalculatorServiceImpl implements Calculate{
 	@Autowired
 	private CalculatorRepository repo;
 	
-	public static final String ADDITION = "sum";
-	public static final String SUBTRACTION = "minus";
-	public static final String MULTIPLICATION = "multiply";
-	public static final String DIVISION = "divide";
+	public static final String TABLE_TRUNCATED_SUCCESSFULLY = "History cleared successfully !";
 	
 //	@Transactional
 //	public ResultDto calculation(String operation, Double element1, Double element2) throws CalculateException {
@@ -124,6 +121,14 @@ public class CalculatorServiceImpl implements Calculate{
 		repo.save(history);
 
 		return result;
+	}
+
+	@Override
+	@Transactional
+	public String deleteHistories(){
+
+		repo.truncateTable();
+		return TABLE_TRUNCATED_SUCCESSFULLY;
 	}
 
 }

@@ -16,6 +16,8 @@ public interface Calculate {
 	public List<CalcHistoryDto> getLatest10History();
 
 	public double calculateMultiOps(String value) throws ScriptException;
+
+	public String deleteHistories();
 	
 
 }

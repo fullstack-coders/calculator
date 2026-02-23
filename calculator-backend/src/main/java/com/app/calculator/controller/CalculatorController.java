@@ -71,4 +71,11 @@ public class CalculatorController {
         return calcService.calculateMultiOps(expression);
 	}
 
+	@DeleteMapping("/deleteHistory")
+	public ResponseEntity<String> deleteHistory(){
+
+		String result = calcService.deleteHistories();
+		return ResponseEntity.ok(result);
+	}
+
 }

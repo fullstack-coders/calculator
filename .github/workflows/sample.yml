@@ -24,7 +24,7 @@ jobs:
       - name: Build and Push Backend Image
         uses: docker/build-push-action@v5
         with:
-          context: ./calculator/calculator-backend # Points to your Java folder
+          context: ./calculator-backend # Points to your Java folder
           push: true
           tags: |
             ${{ secrets.DOCKER_HUB_USERNAME }}/calc-backend:latest
@@ -46,7 +46,7 @@ jobs:
       - name: Build and Push Frontend Image
         uses: docker/build-push-action@v5
         with:
-          context: ./calculator/calculator-frontend # Points to your React folder
+          context: ./calculator-frontend # Points to your React folder
           push: true
           tags: |
             ${{ secrets.DOCKER_HUB_USERNAME }}/calc-frontend:latest

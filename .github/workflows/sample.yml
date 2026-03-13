@@ -3,8 +3,6 @@ name: Full Stack Docker CI
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   # --- JOB 1: BACKEND ---
